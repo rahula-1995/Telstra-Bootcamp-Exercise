@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exercise solution 28</title>
+</head>
+<body>
+	<p id="1">Telstra Corporation Limited is an Australian telecommunications company which builds and operates telecommunications networks and markets voice, mobile, internet access, pay television and other products and services. It is a member of the S&P/ASX 20 and Australia's largest telecommunications company by market share.</p><br>
+
+	<form onsubmit="handler()">
+		<label>subscribe to our newsletter</label>
+		<input type="emailid" name="email" onchange="colorchange()" minlength="4">
+		<button type="submit">submit the form</button>
+
+	</form>
+	<script type="text/javascript">
+		
+		
+		const handler=()=>{
+			var emailid=document.getElementsByName('email')[0].value
+			if (emailid.length<8){
+				window.alert("please type correct emailid")
+				return false;	
+			}
+			else{
+				window.alert(emailid)
+			}
+			return
+		}
+
+		const colorchange=()=> {
+			var emailid=document.getElementsByName('email')[0]
+			if (emailid.value.length>8){
+				emailid.style.backgroundColor="lightgreen"
+			}
+			
+			return
+		}
+
+
+
+	</script>
+
+</body>
+</html>

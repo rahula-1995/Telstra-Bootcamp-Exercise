@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exercise 30</title>
+	<style type="text/css">
+		label{
+			display: block;
+			margin: 10px;
+			background-color: red;
+			width: 250px
+		}
+		input{
+			width: 150px;
+			height:30px;
+			display: block;
+			margin: 10px
+		}
+		button{
+			display: block;
+			margin: 10px;
+			background-color: red;
+			width: 250px
+		}
+		span{
+			display: block;
+			margin: 10px;
+			background-color: red;
+			width: 250px;
+			height: 50px;
+			text-align: center;
+			padding: 5px;
+			position: center;
+		}
+		select{
+			display: block;
+			margin: 10px;
+			background-color: red;
+			width: 250px
+		}
+	</style>
+</head>
+<body>
+		<label>Enter first number</label>
+		<input type="number" name="first">
+		<label>Enter second number</label>
+		<input type="number" name="second">
+		<select name="operator" id="operator">
+  <option value="+">Add</option>
+  <option value="-">Minus</option>
+  <option value="*">Multiply</option>
+  <option value="/">Divide</option>
+</select>
+		<button type="submit" onclick="handler()">Calculate</button><br>
+
+	<span id="result">0</span>
+	<script type="text/javascript">
+		const handler=()=>
+		{
+		var first=(document.getElementsByName('first')[0].value)
+		
+		var second=(document.getElementsByName('second')[0].value)
+		var operator=document.getElementById("operator").value
+		document.getElementById('result').innerHTML=eval(first+operator+second)
+		
+		console.log(first+second)
+	}
+		
+	</script>
+
+</body>
+</html>

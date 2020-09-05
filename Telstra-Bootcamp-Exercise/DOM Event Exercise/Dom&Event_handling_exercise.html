@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dom and event handling exercise</title>
+	<style type="text/css">
+		.change{
+			border: 10px;
+			border-color: black;
+			color: olive;
+			padding: 10px;
+		}
+		
+	</style>
+</head>
+<body>
+<p id="1">Telstra Corporation Limited is an Australian telecommunications company which builds and operates telecommunications networks and markets voice, mobile, internet access, pay television and other products and services. It is a member of the S&P/ASX 20 and Australia's largest telecommunications company by market share.</p><br>
+<p id="2">Telstra has a long history in Australia, originating together with Australia Post as the Postmaster-General's Department upon federation in 1901. Telstra has transitioned from a state-owned enterprise to a fully privatised company and has recently focused on diversified products and emerging technologies.</p>
+<br>
+<p id="3">Australia's telecommunications services were originally controlled by the Postmaster-General's Department (PMG),[3] formed in 1901 as a result of Australian Federation. Prior to 1901, telecommunications were administered by each colony. On 1 July 1975, separate commissions were established by statute to replace the PMG. Responsibility for postal services was transferred to the Australian Postal Commission (Australia Post). The Australian Telecommunications Commission (ATC), trading as Telecom Australia, ran domestic telecommunication services</p>
+
+<script type="text/javascript">
+	//1
+	let newNode = document.createElement("p")
+	let newtext=document.createTextNode("In 1993, the Overseas Telecommunications Commission, a separate government body established in 1946, was merged with the Australian Telecommunications Corporation into the short-lived Australian and Overseas Telecommunications Corporation (AOTC) which continued trading under the established identities of Telecom and OTC. The AOTC was renamed to Telstra Corporation Limited in 1993. The name Telstra is derived from the word Telecom Australia (TEL from Telecom and STRA from Australia). The corporation then traded under the Telstra brand internationally and Telecom Australia domestically until uniform branding of Telstra was introduced throughout the entire organisation in 1995.");
+	newNode.appendChild(newtext)
+	let parentDiv = document.getElementById("1").parentNode
+	let firstnode = document.getElementById("1")
+	parentDiv.insertBefore(newNode, firstnode)
+	//2
+	let newNode2 = document.createElement("p")
+	let newtext2=document.createTextNode("In 1993, the Overseas Telecommunications Commission, a separate government body established in 1946, was merged with the Australian Telecommunications Corporation into the short-lived Australian and Overseas Telecommunications Corporation (AOTC) which continued trading under the established identities of Telecom and OTC. The AOTC was renamed to Telstra Corporation Limited in 1993. The name Telstra is derived from the word Telecom Australia (TEL from Telecom and STRA from Australia). The corporation then traded under the Telstra brand internationally and Telecom Australia domestically until uniform branding of Telstra was introduced throughout the entire organisation in 1995.");
+	newNode2.appendChild(newtext2)
+	parentDiv.appendChild(newNode2)
+	
+	//3
+	let secondnode = document.getElementById("2")
+	console.log(secondnode)
+	//4
+	let newspan1 = document.createElement("span")
+	let newspan2 = document.createElement("span")
+	var spantext1 = document.createTextNode("The Overseas Telecommunications Commission (OTC) was established by an Act of Parliament in August 1946.[5] It inherited facilities and resources from Amalgamated Wireless Australasia Limited (AWA) and Cable & Wireless, and was charged with responsibility for all international telecommunications services into, through and out of Australia.[6]"); 
+	var spantext2 = document.createTextNode("On 1 February 1992, it was merged with Australia's domestic telecommunications carrier, the Australian Telecommunications Corporation Limited (Telecom), to create the Australian and Overseas Telecommunications Corporation Limited (AOTC). The new organisation underwent a corporate identity review and was subsequently renamed Telstra Corporation Limited (Telstra) for international business in 1993 and domestic business in 1995.[3]");
+	newspan1.appendChild(spantext1); 
+	newspan2.appendChild(spantext2);
+	secondnode.innerHTML="<span>Telstra is Wonderful company</span>"+"<br>"+"<span>Telstra is australian companys</span>" 
+	//5
+	console.log(secondnode.getAttribute("id"))
+	//6
+	secondnode.setAttribute("id","two")
+	//7
+	secondnode.setAttribute("name","telstra")
+	//8
+	let thirdnode=document.getElementById("3")
+	thirdnode.style.backgroundColor="crimson"
+	thirdnode.style.color="white"
+	thirdnode.setAttribute("class","change")
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exercise 31</title>
+</head>
+<body>
+	<div class="container">
+            <h1>To do list</h1>
+            <hr />
+            <table>
+                <thead>
+                    <tr>
+                        <th>UserId</th>
+                        <th>Title</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>1
+                            
+
+                        </td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript">
+        	
+        	const url='https://jsonplaceholder.typicode.com/todos';
+        	fetch(url)
+        	.then(data=>data.json())
+        	.then(res=>{
+        		var result=""
+        		var x=document.getElementsByTagName('tbody')[0]
+        		for(let i=0;i<res.length;i++)
+        		{
+			 		result+="<tr><td>"+res[i].userId+"</td><td>"+res[i].title+"</td><td>"+res[i].completed+"</td></tr>"
+			 	}
+			 	x.innerHTML=result
+
+
+
+
+        		console.log(result)
+        		console.log((res[0]))
+        		console.log(res[0].UserId)})
+        	.catch(error=> alert(error))
+        	
+
+        </script>
+
+</body>
+</html>

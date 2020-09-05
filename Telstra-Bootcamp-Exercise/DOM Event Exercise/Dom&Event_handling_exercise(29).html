@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Toggle and collapse exercise(29)</title>
+	<style type="text/css">
+		.toggle{
+			width: 100%;
+			height: 40px;
+			color: blue;
+			background-color: crimson;
+			font-size:20px;
+			font-weight: bold;
+			border-radius: 10px;
+			border-width: 5px;
+			cursor: pointer;
+		}
+		.toggle:hover {
+			background-color: grey;
+
+		}
+		.collapse {
+			width: 90%;
+			display: inline-block;
+			max-height: 0;
+
+			margin: 0px 20px;
+			overflow: hidden;
+			font-size: 15px;
+			padding: 10px;
+		
+		}
+		.active{
+			background-color: grey;
+		}
+	</style>
+</head>
+<body>
+	<button class="toggle">Panel-1</button>
+	<div class="collapse">
+		<p id="1">Telstra Corporation Limited is an Australian telecommunications company which builds and operates telecommunications networks and markets voice, mobile, internet access, pay television and other products and services. It is a member of the S&P/ASX 20 and Australia's largest telecommunications company by market share.</p>
+	</div>
+	<button class="toggle">Panel-2</button>
+	<div class="collapse">
+		<p id="2">Telstra has a long history in Australia, originating together with Australia Post as the Postmaster-General's Department upon federation in 1901. Telstra has transitioned from a state-owned enterprise to a fully privatised company and has recently focused on diversified products and emerging technologies.</p>
+
+	</div>
+	<button class="toggle">Panel-3</button>
+	<div class="collapse">
+		<p id="3">Australia's telecommunications services were originally controlled by the Postmaster-General's Department (PMG),[3] formed in 1901 as a result of Australian Federation. Prior to 1901, telecommunications were administered by each colony. On 1 July 1975, separate commissions were established by statute to replace the PMG. Responsibility for postal services was transferred to the Australian Postal Commission (Australia Post). The Australian Telecommunications Commission (ATC), trading as Telecom Australia, ran domestic telecommunication services</p>
+
+	</div>
+	<script type="text/javascript">
+		var toggle=document.getElementsByClassName('toggle')
+		console.log(toggle)
+		for (let i=0;i<2;i++)
+		{
+			toggle[i].addEventListener("click",()=>
+			{
+				var content = toggle[i].nextElementSibling;
+
+				content.classList.toggle("active")
+				if (content.style.maxHeight)
+				{
+      				content.style.maxHeight = null;
+    			}
+    			else 
+    			{
+      				content.style.maxHeight = content.scrollHeight + "px";
+   				} 
+
+			})
+
+		}
+		
+		const toggleableconverter=(domelement)=>
+		{
+			toggle[2].addEventListener("click",()=>
+			{
+
+			var content = domelement.nextElementSibling;
+			content.classList.toggle("active")
+			console.log(content)
+				if (content.style.maxHeight)
+				{
+      				content.style.maxHeight = null;
+    			}
+    			else 
+    			{
+      				content.style.maxHeight = content.scrollHeight + "px";
+   				} 
+
+		})}
+		toggleableconverter(toggle[2])
+	</script>
+
+</body>
+</html>
