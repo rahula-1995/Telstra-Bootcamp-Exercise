@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Exercise</title>
+	<style type="text/css">
+		.toggle{
+			width: 100%;
+			height: 40px;
+			color: blue;
+			background-color: crimson;
+			font-size:20px;
+			font-weight: bold;
+			border-radius: 10px;
+			border-width: 5px;
+			
+			
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.one{
+			background-color: blue;
+			color: white
+		}
+		.two{
+			background-color: crimson;
+			color: blue
+		}
+		.three{
+			background-color: #baba10a8;
+			color: white
+		}
+		.toggle:hover {
+			background-color: grey;
+
+		}
+		.collapse {
+			border-radius: 10px;
+			border-width: 5px;
+			
+            justify-content: center;
+            
+
+			margin: 0px 30% 10px;
+			
+			font-size: 15px;
+			padding: 10px;
+			background-color: #16e116;
+		
+		}
+		button{
+			width:60%;
+			margin: 5%;
+			height: 50px;
+			font-weight: bold;
+			font-size: 20px;
+			border-radius: 5px;
+			color: white;
+			cursor: pointer;
+            background-color: #ef0b59
+			
+		}
+		.button:hover {
+			box-shadow: all;
+			background-size: 70px;
+			background-color: grey;
+		}
+		
+        .card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 90%;
+  background-color: yellowgreen;
+  display: inline-block;
+  margin: 4%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+img{
+    width:100%;
+}   
+input{
+    margin: 2px;
+}  
+
+	</style>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li><a href="/contact">Contact</a></li>
+		</ul>
+			</nav>
+	<div class="toggle one">Contact Details</div>
+	<div class="collapse">
+        
+	<div class="card">
+        
+ 
+    <h4>Name:Rahul Anand</h4> 
+    <p>Phone:9066263385</p> 
+    <p>Email:alokrockrahul@gmail.com</p>
+
+</div>
+<div class="forms">
+    <h3>Please fill the form to contact me.</h3>
+    <form method="POST" action="/message">
+        <label>Enter your Name:</label>
+		<input type="text" name="name"><br>
+		<label>Enter your Email id:</label>
+        <input type="email" name="email"><br>
+        <label>type your message:</label>
+        <input type="text" name="message"><br>
+        <button type="submit">send message</button>
+    </form>
+
+
+
+
+
+</div>
+		
+	</div>
+	
+
+
+</body>
+</html>
