@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ProductSchema = exports.ContactSchema = exports.ArticleSchema = void 0;
+exports.ArticleSchema = void 0;
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 var ObjectIdSchema = Schema.ObjectId;
@@ -49,58 +49,5 @@ exports.ArticleSchema = new Schema({
         }
     },
     comments: [CommentSchema]
-});
-exports.ContactSchema = new Schema({
-    firstName: {
-        type: String,
-        required: 'Enter a first name'
-    },
-    lastName: {
-        type: String,
-        required: 'Enter a last name'
-    },
-    email: {
-        type: String
-    },
-    company: {
-        type: String
-    },
-    phone: {
-        type: Number
-    },
-    created_date: {
-        type: Date,
-        default: Date.now
-    }
-});
-const ReviewsSchema = new Schema({ reviewer: { type: String, required: 'enter the name' } }, { ratings: { type: Number, required: 'enter the rating' } }, { title: { type: String } }, { text: { type: String, required: 'enter something' } }, { created_date: {
-        type: Date,
-        default: Date.now
-    } });
-exports.ProductSchema = new Schema({
-    name: {
-        type: String,
-        required: 'Enter your name'
-    },
-    description: {
-        type: String
-    },
-    price: {
-        type: Number,
-        required: 'Enter the price'
-    },
-    rating: {
-        type: Number
-    },
-    urls: {
-        type: [String]
-    },
-    reviews: { _id: { type: ObjectIdSchema, default: function () { return new ObjectId(); } }, reviewer: { type: String, required: 'enter the name' },
-        ratings: { type: Number, required: 'enter the rating' },
-        title: { type: String }, text: { type: String, required: 'enter something' },
-        created_date: {
-            type: Date,
-            default: Date.now
-        } }
 });
 //# sourceMappingURL=crmModel.js.map

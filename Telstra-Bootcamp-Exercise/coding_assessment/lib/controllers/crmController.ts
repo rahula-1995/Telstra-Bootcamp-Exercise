@@ -64,7 +64,7 @@ public addNewArticle (req: Request, res: Response) {
             if(err){
                 res.send(err);
             }
-            //res.json(article);
+            res.json(article);
             
         });
     }
