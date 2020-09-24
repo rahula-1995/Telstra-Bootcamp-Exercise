@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+
+
+    >
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary"
+        android:onClick="showToast"
+
+
+        android:text="@string/button_label_toast" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="0"
+        android:background="#FFFF00"
+        android:textColor="@android:color/white"
+
+        android:textSize="@dimen/count_text_size"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button2"
+        android:onClick="countUp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary"
+        android:text="count" />
+</LinearLayout>
