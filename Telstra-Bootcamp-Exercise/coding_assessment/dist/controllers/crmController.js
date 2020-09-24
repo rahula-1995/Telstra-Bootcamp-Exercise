@@ -62,7 +62,7 @@ class ArticleController {
             if (err) {
                 res.send(err);
             }
-            //res.json(article);
+            res.json(article);
         });
     }
 }
