@@ -15,9 +15,7 @@ const iPhone11 = {
         },
         availableColors: [ 'Black', 'Green', 'Yellow', 'Purple', 'Red', 'White' ]
     },
-    calculateDiscoutedPrice: function( percentage ) {
-        return this.price * ( 100 - percentage ) / 100;
-    }
+    calculateDiscoutedPrice: (percentage)=>this.price * ( 100 - percentage ) / 100;
 }
 
 var {
